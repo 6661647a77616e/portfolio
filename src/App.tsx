@@ -1,6 +1,7 @@
 import React from "react";
 import BackgroundImage from "./components/BackgroundImage";
 import TerminalBox from "./components/TerminalBox";
+import Footer from "./components/Footer";
 
 export default function App() {
 	return (
@@ -15,6 +16,7 @@ export default function App() {
 						</a>
 					</div>
 					<TerminalBox />
+					<Footer/>
 				</div>
 			</div>
 			<BackgroundImage />
