@@ -115,6 +115,30 @@ export default function TerminalBox() {
 		  
 		  }
 
+		  else if (cmd.toLowerCase() === "harraz") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://x.com/harraznsrllh","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
 		// else if (cmd.toLowerCase() === "email") {
 		// 	setEnteredCmd((currentCmd) => [
 		// 	  ...currentCmd,
