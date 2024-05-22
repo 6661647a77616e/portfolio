@@ -7,20 +7,20 @@ function Footer() {
       borderTop: '1px solid #ccc',
       padding: '10px',
       display: 'flex',
-      justifyContent: 'space-betwen',
+      justifyContent: 'space-between',
       alignItems: 'center',
       fontSize: '14px',
-      color: '#555',
+      color: '#666',
       position: 'absolute',
       bottom: 0,
       width: '100%',
-    //   boxSizing: ''
+      boxSizing: 'border-box'
     }}>
       <div style={{
         display: 'flex',
         alignItems: 'center'
       }}>
-        &copy; 2024 Kali Lincox
+        &copy; 2024 Your Company Name
       </div>
       <div style={{
         display: 'flex',
@@ -31,7 +31,7 @@ function Footer() {
           textDecoration: 'none',
           marginLeft: '10px'
         }}>
-          Privacy Kita
+          Privacy Policy
         </a>
         <a href="#" style={{
           color: '#666',
