@@ -41,18 +41,105 @@ export default function TerminalBox() {
 				{ ...renderCmd(cmd), time: new Date().toLocaleTimeString(), Component: Help },
 			]);
 		} 
-		// else if (cmd.toLowerCase() === "red") {
+		else if (cmd.toLowerCase() === "email") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.location.href = "mailto:fadzwanashriq.m@gmail.com";
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening email client...</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+			// Simulate email functionality
+			console.log("Opening email client...");
+		  }
+
+		  else if (cmd.toLowerCase() === "github") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://github.com/fadzwanashriq","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening github pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
+		  else if (cmd.toLowerCase() === "twitter") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://x.com/IDEEIwXJ56jSQ66","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
+		// else if (cmd.toLowerCase() === "email") {
 		// 	setEnteredCmd((currentCmd) => [
-		// 		...currentCmd,
-		// 		{ 
-		// 			...renderCmd(cmd), 
-		// 			time: new Date().toLocaleTimeString(), 
-		// 			Component: Help, 
-		// 			color: 'white', // Set text color to white for better contrast
-		// 			backgroundColor: 'red' 
+		// 	  ...currentCmd,
+		// 	  {
+		// 		...renderCmd(cmd),
+		// 		time: new Date().toLocaleTimeString(),
+		// 		Component: () => {
+		// 		  const handleEmailClick = () => {
+		// 			window.location.href = "mailto:fadzwanashriq.m@gmail.com";
+		// 		  };
+		  
+		// 		  return (
+		// 			<div>
+		// 			  <button onClick={handleEmailClick}>Send Email</button>
+		// 			</div>
+		// 		  );
 		// 		},
+		// 		color: 'White',
+		// 		backgroundColor: 'red'
+		// 	  },
 		// 	]);
-		// }
+		  
+		// 	// Simulate email functionality
+		// 	console.log("Opening email client...");
+		//   }
 		else {
 			setEnteredCmd((currentCmd) => [
 				...currentCmd,

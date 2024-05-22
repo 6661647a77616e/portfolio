@@ -20,7 +20,7 @@ function Footer() {
         display: 'flex',
         alignItems: 'center'
       }}>
-        &copy; 2024 Your Company Name
+        &copy; 2024 Kali Lincox
       </div>
       <div style={{
         display: 'flex',
