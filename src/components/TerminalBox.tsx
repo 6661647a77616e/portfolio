@@ -139,6 +139,102 @@ export default function TerminalBox() {
 		  
 		  }
 
+		  else if (cmd.toLowerCase() === "optimism") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://www.youtube.com/watch?v=o48X3_XQ9to","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
+		  else if (cmd.toLowerCase() === "jamal") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://www.youtube.com/watch?v=T13zfUrxHDY","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
+		  else if (cmd.toLowerCase() === "oneheart") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://www.youtube.com/watch?v=NaZeslUINF4","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
+		  else if (cmd.toLowerCase() === "shutdown now") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.close()
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
 		// else if (cmd.toLowerCase() === "email") {
 		// 	setEnteredCmd((currentCmd) => [
 		// 	  ...currentCmd,
