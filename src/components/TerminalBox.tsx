@@ -235,6 +235,32 @@ export default function TerminalBox() {
 		  
 		  }
 
+		  else if (cmd.toLowerCase() === "4am") {
+			setEnteredCmd((currentCmd) => [
+			  ...currentCmd,
+			  {
+				...renderCmd(cmd),
+				time: new Date().toLocaleTimeString(),
+				Component: () => {
+				  useEffect(() => {
+					window.open("https://www.youtube.com/watch?v=EykOsPxir8k","_blank")
+				  }, []);
+		  
+				  return (
+					<div>
+					  <p>Opening twitter pages</p>
+					</div>
+				  );
+				},
+				color: 'White',
+				backgroundColor: 'red'
+			  },
+			]);
+		  
+		  }
+
+		  
+
 		// else if (cmd.toLowerCase() === "email") {
 		// 	setEnteredCmd((currentCmd) => [
 		// 	  ...currentCmd,
